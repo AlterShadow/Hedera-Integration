@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "Gilroy-Regular";
+	src: url("./assets/Gilroy/Gilroy-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-Bold";
+	src: url("./assets/Gilroy/Gilroy-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-Black";
+	src: url("./assets/Gilroy/Gilroy-Black.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-SemiBold";
+	src: url("./assets/Gilroy/Gilroy-SemiBold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-Thin";
+	src: url("./assets/Gilroy/Gilroy-UltraLight.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Gilroy-Regular", sans-serif;
+	height: 100vh;
+	overflow: scroll;
+	overflow-x: hidden !important;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(131, 139, 197, 0.2)),
+		color-stop(rgba(131, 139, 197, 0.4)),
+		color-stop(rgba(131, 139, 197, 0.4)),
+		to(rgba(131, 139, 197, 0.2))
+	);
+	background: linear-gradient(
+		to right,
+		rgba(131, 139, 197, 0.2),
+		rgba(131, 139, 197, 0.4),
+		rgba(131, 139, 197, 0.4),
+		rgba(131, 139, 197, 0.2)
+	);
+}
