@@ -111,18 +111,3 @@ body .sidebar-container .sidebar-social svg {
 	height: 30px;
 	fill: #3251bf;
 }
-
-body .hamburger {
-	display: none;
-}
-
-@media screen and (max-width: 550px) {
-	body .sidebar-container {
-		display: block;
-		-webkit-transform: translateX(-100%);
-		transform: translateX(-100%);
-	}
-	body .hamburger {
-		display: block;
-	}
-}
