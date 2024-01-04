@@ -7,6 +7,7 @@ import Vote from "./pages/Vote";
 import HomeRootLayout from "./pages/HomeRoot";
 import HomePage from "./pages/HomePage";
 import { ModalContextProvider } from "./util/modalContext";
+import { AllWalletsProvider } from "./services/wallets/AllWalletsProvider";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,9 @@ function App() {
   return (
     <>
       <ModalContextProvider>
-        <RouterProvider router={router} />
+        <AllWalletsProvider>
+          <RouterProvider router={router} />
+        </AllWalletsProvider>
       </ModalContextProvider>
     </>
   );
