@@ -13,6 +13,7 @@
     "@bladelabs/blade-web3.js": "^1.0.3",
     "@hashgraph/sdk": "^2.39.0",
     "@metamask/sdk-react": "^0.14.1",
+    "buffer": "^6.0.3",
     "dotenv": "^16.3.1",
     "ethers": "^5.7.2",
     "hashconnect": "^0.2.9",
