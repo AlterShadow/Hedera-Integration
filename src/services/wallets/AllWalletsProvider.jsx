@@ -3,7 +3,7 @@ import { BladeContextProvider } from "../../contexts/BladeContext";
 import { HashconnectContextProvider } from "../../contexts/HashconnectContext";
 import { MetamaskContextProvider } from "../../contexts/MetamaskContext";
 import { BladeClient } from "./blade/bladeClient";
-import { HashConnectClient } from "./hashconnect/hashconnectClient";
+// import { HashConnectClient } from "./hashconnect/hashconnectClient";
 import { MetaMaskClient } from "./metamask/metamaskClient";
 
 export const AllWalletsProvider = (props) => {
@@ -11,7 +11,7 @@ export const AllWalletsProvider = (props) => {
     <BladeContextProvider>
       <MetamaskContextProvider>
         <HashconnectContextProvider>
-          <HashConnectClient />
+          {/* <HashConnectClient /> */}
           <BladeClient />
           <MetaMaskClient />
           {props.children}
