@@ -3,17 +3,19 @@ import Logo from "../../assets/BrandingAssets-main/Brand/Logo.svg";
 import "./header.css";
 import { NavLink } from "react-router-dom";
 import ModalContext from "../../util/modalContext";
-import { useWallet } from "../../contexts/WalletContext";
+import { useWalletInterface } from "../../services/wallets/useWalletInterface";
 
 export default function Header() {
   const modalCtx = useContext(ModalContext);
-  const { wallet, setWallet, setConnection } = useWallet();
+  const { accountId, walletInterface } = useWalletInterface();
 
-  useEffect(() => {}, [wallet]);
-
-  function handleConnectWalletModal() {
-    modalCtx.showConnectWallet();
-  }
+  const handleConnectWalletModal = () => {
+    if (accountId) {
+      walletInterface.disconnect();
+    } else {
+      modalCtx.showConnectWallet();
+    }
+  };
   return (
     <>
       <header>
@@ -32,7 +34,7 @@ export default function Header() {
 
         <div className="button">
           <button className="primary-btn" onClick={handleConnectWalletModal}>
-            Connect Wallet
+            {accountId ? `Connected: ${accountId}` : "Connect Wallet"}
           </button>
         </div>
       </header>
