@@ -3,7 +3,7 @@ import { BladeContext } from "../../contexts/BladeContext";
 import { HashconnectContext } from "../../contexts/HashconnectContext";
 import { MetamaskContext } from "../../contexts/MetamaskContext";
 import { bladeWallet } from "./blade/bladeClient";
-// import { hashConnectWallet } from "./hashconnect/hashconnectClient";
+import { hashConnectWallet } from "./hashconnect/hashconnectClient";
 import { metamaskWallet } from "./metamask/metamaskClient";
 
 // Purpose: This hook is used to determine which wallet interface to use

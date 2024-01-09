@@ -8,6 +8,11 @@ import HomeRootLayout from "./pages/HomeRoot";
 import HomePage from "./pages/HomePage";
 import { ModalContextProvider } from "./util/modalContext";
 import { AllWalletsProvider } from "./services/wallets/AllWalletsProvider";
+import { Buffer } from "buffer";
+
+window.global = window.global ?? window;
+window.Buffer = window.Buffer ?? Buffer;
+window.process = window.process ?? { env: {} };
 
 const router = createBrowserRouter([
   {

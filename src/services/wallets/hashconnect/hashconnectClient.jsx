@@ -134,8 +134,8 @@ const hashConnectInitPromise = new Promise(async (resolve) => {
       wallet can display what app is requesting access from the user
   */
   const appMetadata = {
-    name: "Hedera CRA Template",
-    description: "Hedera CRA Template",
+    name: "SirioFi",
+    description: "Sirio Finance",
     icon: window.location.origin + "/logo192.png",
   };
   const initResult = await hashConnect.init(appMetadata, hederaNetwork, true);

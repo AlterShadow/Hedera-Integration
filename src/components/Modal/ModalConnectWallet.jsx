@@ -7,6 +7,7 @@ import Modal from "./Modal";
 
 import { connectToMetamask } from "../../services/wallets/metamask/metamaskClient";
 import { connectToBladeWallet } from "../../services/wallets/blade/bladeClient";
+import { hashConnect } from "../../services/wallets/hashconnect/hashconnectClient";
 
 export default function ModalConnectWallet() {
   const modalCtx = useContext(ModalContext);
@@ -14,6 +15,11 @@ export default function ModalConnectWallet() {
   const MetaMaskConnectHandler = () => {
     handleCloseWallet();
     connectToMetamask();
+  };
+
+  const HashPackConnectHandler = () => {
+    handleCloseWallet();
+    hashConnect.connectToLocalWallet();
   };
 
   const BladeConnectHandler = () => {
@@ -36,7 +42,7 @@ export default function ModalConnectWallet() {
             <img src={metamaskImg} alt="" />
             <p>Metamask</p>
           </button>
-          <button>
+          <button onClick={HashPackConnectHandler}>
             <img src={hashpackImg} alt="" />
             HashPack
           </button>

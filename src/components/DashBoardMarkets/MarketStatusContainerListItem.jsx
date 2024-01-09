@@ -33,6 +33,11 @@ export default function MarketListItem({
     collateralClass = "button";
   }
 
+  const claimHandler = (e) => {
+    e.stopPropagation();
+    console.log("Claim Button Clicked");
+  };
+
   return (
     <>
       <div
@@ -47,7 +52,12 @@ export default function MarketListItem({
         <span>{amount}</span>
         {collateral ? (
           <div className="cell">
-            <button className="primary-btn lower-padding">Claim</button>
+            <button
+              className="primary-btn lower-padding z-10"
+              onClick={claimHandler}
+            >
+              Claim
+            </button>
           </div>
         ) : null}
         {availableBorrow ? (
