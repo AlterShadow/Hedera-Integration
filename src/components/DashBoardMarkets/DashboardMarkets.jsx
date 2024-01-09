@@ -24,11 +24,25 @@ export default function DashBoardMarkets() {
           signer
         );
         const ProtocolContract = new ethers.Contract(
-          "0x0800E04533Afc1279c55c85734d49a2f61785539",
+          "0xC651E1F7D24fB1E1cAe14cb5f9818F1C1dFb9FeD",
           SFProtocolABI,
           signer
         );
-        console.log("Marketing:", MarketManagerContract);
+        // console.log(
+        //   "Marketing:",
+        //   await MarketManagerContract.getBorrowableAmount(
+        //     accountId,
+        //     "0x000000000000000000000000000000000008437c"
+        //   )
+        // );
+        console.log("Market:", MarketManagerContract);
+        console.log(
+          "==============",
+          await MarketManagerContract.getBorrowableAmount(
+            accountId,
+            "0xC651E1F7D24fB1E1cAe14cb5f9818F1C1dFb9FeD"
+          )
+        );
         console.log("Protocol:", ProtocolContract);
       }
     };
